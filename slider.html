@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <img  class="demo" src="https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1707920217641.jpg" alt="car" style="height: 200px;" >
+        <img  class="demo" src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/rolls_royce_phantom_top_10.jpg?itok=XjL9f1tx" alt="car" style="height: 200px;">
+    </section>
+    <script>
+        var slider=0;
+        sliders();
+
+        function sliders(){
+            var k;
+            var x=document.getElementsByClassName("demo");
+            for(k=0;k<x.length;k++){
+                x[k].style.display="none";
+            }
+            slider++;
+            if(slider>x.length){slider=1;}
+            x[slider-1].style.display="block";
+            setTimeout(sliders,3000);
+        }
+    </script>
+</body>
+</html> 
